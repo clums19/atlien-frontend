@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {Route} from 'react-router-dom';
 import ClubIndex from "../pages/ClubIndex";
+import Main from "./Main";
 
 
 function Club(props){
@@ -19,6 +20,7 @@ function Club(props){
     return(
         <main>
             <h1 className="head">ATLien: Gentlemen Clubs</h1>
+            <Main />
             <Route path='/clubs'>
                 <ClubIndex club={club}/>
             </Route>

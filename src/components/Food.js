@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {Route} from 'react-router-dom';
 import FoodIndex from "../pages/FoodIndex";
+import Main from "./Main";
 
 function Food(props){
     const [food, setFood] =useState(null);
@@ -18,6 +19,7 @@ function Food(props){
     return(
         <main>
             <h1 className="head">ATLien: Food</h1>
+            <Main />
             <Route path='/foods'>
                 <FoodIndex food={food}/>
             </Route>
