@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Main from './components/Main';
 import Food from './components/Food';
 import Club from './components/Club';
+import Bar from './components/Bar';
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path='/clubs'>
           <Club />
+        </Route>
+        <Route path='/bars'>
+          <Bar />
         </Route>
       </Switch>
       
