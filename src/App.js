@@ -6,6 +6,7 @@ import Food from './components/Food';
 import Club from './components/Club';
 import Bar from './components/Bar';
 import Park from './components/Park';
+import Attraction from './components/Attraction';
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path='/parks'>
           <Park />
+        </Route>
+        <Route path='/attractions'>
+          <Attraction />
         </Route>
       </Switch>
       
