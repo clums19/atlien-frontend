@@ -1,0 +1,37 @@
+// Variables
+$maincolor: #F7934C;
+$accentcolor: #53917E;
+$grey: #998DA0;
+$white: #FFFFFC;
+$black: #000000;
+$brown: #603706;
+
+@mixin peaches {
+    background-color: $grey;
+    color: $black;
+}
+@mixin steams {
+    background-color: $maincolor;
+    color: $black;
+}
+main {
+    @include steams;
+}
+body {
+    @include peaches;
+    text-decoration: none;
+}
+div.foods {
+    position: relative;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 90px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
