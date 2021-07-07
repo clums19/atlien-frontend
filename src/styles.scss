@@ -18,7 +18,14 @@ body {
     height: 100vh;
 }
 nav {
-    color: $white;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+    a {
+        text-decoration: none;
+        color: $grey;
+    }
 }
 div {
     margin: auto;
