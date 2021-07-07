@@ -5,7 +5,7 @@ function AttractionIndex(props){
     return props.attraction.map((attraction) => (
         <div key={attraction._id} className='foods'>
           <div id='section'>
-            <h2>{attraction.title}</h2>
+            <span>{attraction.title}</span>
             {attraction.image && <img src={attraction.image} alt={attraction.title}/>}
           </div>
         </div>

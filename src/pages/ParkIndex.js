@@ -5,7 +5,7 @@ function ParkIndex(props){
     return props.park.map((park) => (
         <div key={park._id} className='foods'>
           <div id='section'>
-            <h2>{park.title}</h2>
+            <span>{park.title}</span>
             {park.image && <img src={park.image} alt={park.title}/>}
           </div>
         </div>

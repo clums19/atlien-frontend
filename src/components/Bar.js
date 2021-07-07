@@ -22,7 +22,9 @@ function Bar(props){
             <h1 className="head">ATLien: Bars and Lounges</h1>
             <Main />
             <Route path='/bars'>
-                <BarIndex bar={bar}/>
+                <div className="itemsContainer">
+                    <BarIndex bar={bar}/>
+                </div>
             </Route>
         </main>
     )

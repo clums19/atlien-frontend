@@ -5,7 +5,7 @@ function FoodIndex(props){
     return props.food.map((food) => (
         <div key={food._id} className='foods'>
           <div id='section'>
-            <h2>{food.title}</h2>
+            <span>{food.title}</span>
             {food.image && <img src={food.image} alt={food.title}/>}
           </div>
         </div>

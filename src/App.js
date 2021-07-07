@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import Main from './components/Main';
+import BigNav from './components/BigNav';
 import Food from './components/Food';
 import Club from './components/Club';
 import Bar from './components/Bar';
@@ -17,7 +17,7 @@ function App() {
           <Home />
         </Route> 
         <Route path='/nav'>
-          <Main />
+          <BigNav />
         </Route>
         <Route path='/foods'>
           <Food />

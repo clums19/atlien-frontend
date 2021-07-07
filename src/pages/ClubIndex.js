@@ -5,7 +5,7 @@ function ClubIndex(props){
     return props.club.map((club) => (
         <div key={club._id} className='foods'>
           <div id='section'>
-            <h2>{club.title}</h2>
+            <span>{club.title}</span>
             {club.image && <img src={club.image} alt={club.title}/>}
           </div>
         </div>

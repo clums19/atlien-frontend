@@ -1,15 +1,15 @@
-
+import { useState } from 'react';
 function BarIndex(props){
 
   const loaded = () => {
-    return props.bar.map((bar) => (
-        <div key={bar._id} className='foods'>
-          <div id='section'>
-            <h2>{bar.title}</h2>
-            {bar.image && <img src={bar.image} alt={bar.title}/>}
+      return props.bar.map((bar) => (
+          <div key={bar._id} className='foods'>
+            <div id='section'>
+              <span className="title">{bar.title}</span>
+              {bar.image && <img src={bar.image} alt={bar.title}/>}
+            </div>
           </div>
-        </div>
-    ));
+      ));
   };
 
   const loading = () => {

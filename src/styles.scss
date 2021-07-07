@@ -6,32 +6,82 @@ $white: #FFFFFC;
 $black: #000000;
 $brown: #603706;
 
-@mixin peaches {
-    background-color: $grey;
-    color: $black;
-}
-@mixin steams {
-    background-color: $maincolor;
-    color: $black;
-}
 main {
-    @include steams;
+    margin: auto;
+    text-align: center;
+
 }
 body {
-    @include peaches;
     text-decoration: none;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
 }
-div.foods {
-    position: relative;
-    display: block;
+nav {
+    color: $white;
+}
+div {
+    margin: auto;
+    align-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+span {
+    font-weight: bold;
+}
+.bigNav {
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+    a {
+        color: $grey;
+        padding-top: 40px;
+        padding-left: 250px;
+        text-decoration: none;
+        font-size: 3em;
+        flex-grow: 1;
+        text-align: left;
+    }
+}
+// .bigNav>a {
+
+// }
+.section {
+    position: relative;
     flex-wrap: wrap;
 }
-img {
+.foods {
     width: 200px;
+    max-width: 200px;
+    height: 250px;
+    max-height: 200px;
+    min-height: 250px;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 5px;
+    display: inline-block;
+}
+.title {
+    text-align: center;
+    display: block;
+}
+img {
     height: 200px;
+    width: 200px;
+    padding: 5px;
     border-radius: 90px;
+    display: block;
+    float: left;
     object-fit: cover;
     cursor: pointer;
+    text-align: center;
 }
+// flex:1;
+//   margin: 5px;
+//   height: 100px;
+//   width: 100px;
+//   display: block;
+//   cursor: pointer;
+//   object-fit:cover;
 
