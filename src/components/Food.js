@@ -17,6 +17,7 @@ function Food(props){
     
     return(
         <main>
+            <h1 className="head">ATLien: Food</h1>
             <Route path='/foods'>
                 <FoodIndex food={food}/>
             </Route>
