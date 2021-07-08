@@ -13,21 +13,34 @@ function AttractionIndex(props){
           trigger={<span className='span'>{attraction.title}</span>}
           modal
           nested>
+            {close => (
+        <div className="modal">
+          <button className="close" onClick={close}>
+            &times;
+          </button>
         <div className="header">{attraction.title}</div>
             <div className="content">
               {' '}
-              {attraction.description}
+                {attraction.description}
               <br />
-              <p>Distance: {attraction.distance}</p>
+                <p>Distance: {attraction.distance} from Atlanta Center</p>
               <br />
-              <Link to={attraction.web}>
-                Click to go to Website
-              </Link> 
+                <a href={attraction.web} target='_blank'>
+                  Click to go to Website
+                </a> 
             </div>
-      </Popup>
-            {attraction.image && <img src={attraction.image} alt={attraction.title}/>}
-          </div>
+        <button
+          className="button"
+          onClick={() => {
+            close();
+          }}> Close
+        </button>
         </div>
+        )}
+      </Popup>
+    {attraction.image && <img src={attraction.image} alt={attraction.title}/>}
+      </div>
+    </div>
     ));
   };
 

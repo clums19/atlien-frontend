@@ -36,6 +36,7 @@ div {
 }
 span {
     font-weight: bold;
+    cursor: pointer;
 }
 .bigNav {
     display: flex;
@@ -83,11 +84,47 @@ img {
     object-fit: cover;
     text-align: center;
 }
-// flex:1;
-//   margin: 5px;
-//   height: 100px;
-//   width: 100px;
-//   display: block;
-//   cursor: pointer;
-//   object-fit:cover;
+.modal {
+    font-size: 20px;
+    background-color: $black;
+    color: $accentcolor;
+    width: 50%;
+  }
+  .modal > .header {
+    width: 45%;
+    border-bottom: 1px solid gray;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px;
+  }
+  .modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+  }
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  [data-popup='tooltip'].popup-overlay {
+    background: transparent;
+  }
 
