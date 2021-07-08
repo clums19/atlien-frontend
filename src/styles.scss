@@ -15,22 +15,47 @@ body {
     text-decoration: none;
     margin: auto;
     text-align: center;
-    height: 100vh;
+    height: 100vh; 
+    background-image: url('https://i.imgur.com/9aSbDhH.png') ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+.indexNav {
+  text-align: center;
+  margin: 100px;
+  padding: 200px;
+  color: $maincolor;
+  text-shadow: 1px 1px $black;
+  font-size: 35px;
+  a {
+    color: $maincolor;
+    text-decoration: none;
+    border: solid $grey;
+    
+  }
+}
+.head {
+  color: $maincolor;
+
 }
 .mainNav {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    border-bottom: 1px solid $grey;
-    border-top: 1px solid $grey;
+    padding: 2spx;
+    border-bottom: 2px solid $maincolor;
+    border-top: 2px solid $maincolor;
     justify-content: space-around;
     flex-wrap: wrap;
     a {
         text-decoration: none;
         color: $grey;
+        text-shadow: 1px 1px $black;
     }
     a:hover {
-      background-color: $accentcolor;
+      background-color: $maincolor;
       color: $white;
     }
 }
@@ -40,9 +65,14 @@ div {
     align-items: stretch;
     flex-wrap: wrap;
     flex-direction: column;
+    background: rgba(0, 0, 0, 0.2);
 }
 span {
     font-weight: bold;
+    font-size: 18px;
+    color: $grey;
+    text-shadow: 1px 1px $black;
+    background: rgba(255, 255, 255, 0.2);
 }
 .bigNav {
     display: flex;
@@ -57,10 +87,10 @@ span {
         font-size: 3em;
         flex-grow: 1;
         text-align: left;
-        
+        text-shadow: 1px 1px $black;
     }
     a:hover {
-      background-color: $accentcolor;
+      background-color: $maincolor;
       color: $white;
     }
 }
@@ -79,6 +109,7 @@ span {
     margin-bottom: 40px;
     padding: 5px;
     display: inline-block;
+    background: transparent;
 }
 .title {
     text-align: center;
@@ -95,7 +126,7 @@ img {
     text-align: center;
 }
 img:hover {
-  border: 2px solid $accentcolor;
+  border: 2px solid $maincolor;
 }
 .modal {
     font-size: 20px;
