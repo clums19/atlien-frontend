@@ -6,8 +6,9 @@ function ParkIndex(props){
     return props.park.map((park) => (
         <div key={park._id} className='foods'>
           <div id='section'>
+            <span>{park.title}</span>
           <Popup
-              trigger={<span className='span'>{park.title}</span>}
+              trigger={<span className='span'>{park.image && <img src={park.image} alt={park.title}/>}</span>}
               modal
               nested>
               {close => (
@@ -18,7 +19,9 @@ function ParkIndex(props){
                 <div className="header">{park.title}</div>
                     <div className="content">
                       {' '}
-                        {park.description}
+                      {park.image && <img src={park.image} alt={park.title}/>}
+                      <br />
+                      {park.description}
                       <br />
                         <p>Distance: {park.distance} from Atlanta Center</p>
                       <br />
@@ -35,7 +38,7 @@ function ParkIndex(props){
                 </div>
                 )}
               </Popup>
-            {park.image && <img src={park.image} alt={park.title}/>}
+            
           </div>
         </div>
     ));

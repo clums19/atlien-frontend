@@ -7,8 +7,9 @@ function AttractionIndex(props){
     return props.attraction.map((attraction) => (
       <div key={attraction._id} className='foods'>
           <div id='section'>
+            <span>{attraction.title}</span>
       <Popup
-          trigger={<span className='span'>{attraction.title}</span>}
+          trigger={<span className='span'>{attraction.image && <img src={attraction.image} alt={attraction.title}/>}</span>}
           modal
           nested>
             {close => (
@@ -19,6 +20,8 @@ function AttractionIndex(props){
         <div className="header">{attraction.title}</div>
             <div className="content">
               {' '}
+              {attraction.image && <img src={attraction.image} alt={attraction.title}/>}
+              <br />
                 {attraction.description}
               <br />
                 <p>Distance: {attraction.distance} from Atlanta Center</p>
@@ -36,7 +39,6 @@ function AttractionIndex(props){
         </div>
         )}
       </Popup>
-    {attraction.image && <img src={attraction.image} alt={attraction.title}/>}
       </div>
     </div>
     ));

@@ -23,7 +23,7 @@ function FoodIndex(props){
                       <br />
                         {food.description}
                       <br />
-                        <p>Distance: {food.distance} from Atlanta Center</p>
+                        <p>Distance: {food.distance} from Atlanta City Center</p>
                       <br />
                         <a href={food.web} target='_blank' rel='noreferrer'>
                           Click to go to Website

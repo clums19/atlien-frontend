@@ -6,8 +6,9 @@ function BarIndex(props){
       return props.bar.map((bar) => (
           <div key={bar._id} className='foods'>
             <div id='section'>
+              <span>{bar.title}</span>
             <Popup
-              trigger={<span className='span'>{bar.title}</span>}
+              trigger={<span className='span'>{bar.image && <img src={bar.image} alt={bar.title}/>}</span>}
               modal
               nested>
               {close => (
@@ -18,7 +19,9 @@ function BarIndex(props){
                 <div className="header">{bar.title}</div>
                     <div className="content">
                       {' '}
-                        {bar.description}
+                      {bar.image && <img src={bar.image} alt={bar.title}/>}
+                      <br />
+                      {bar.description}
                       <br />
                         <p>Distance: {bar.distance} from Atlanta Center</p>
                       <br />
@@ -35,7 +38,6 @@ function BarIndex(props){
                 </div>
                 )}
               </Popup>
-              {bar.image && <img src={bar.image} alt={bar.title}/>}
             </div>
           </div>
       ));

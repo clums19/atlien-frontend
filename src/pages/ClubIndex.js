@@ -6,8 +6,9 @@ function ClubIndex(props){
     return props.club.map((club) => (
         <div key={club._id} className='foods'>
           <div id='section'>
+            <span>{club.title}</span>
             <Popup
-              trigger={<span className='span'>{club.title}</span>}
+              trigger={<span className='span'>{club.image && <img src={club.image} alt={club.title}/>}</span>}
               modal
               nested>
               {close => (
@@ -18,6 +19,8 @@ function ClubIndex(props){
                 <div className="header">{club.title}</div>
                     <div className="content">
                       {' '}
+                      {club.image && <img src={club.image} alt={club.title}/>}
+                      <br />
                         {club.description}
                       <br />
                         <p>Distance: {club.distance} from Atlanta Center</p>
@@ -35,7 +38,7 @@ function ClubIndex(props){
                 </div>
                 )}
               </Popup>
-            {club.image && <img src={club.image} alt={club.title}/>}
+            
           </div>
         </div>
     ));
