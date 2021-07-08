@@ -6,8 +6,9 @@ function FoodIndex(props){
     return props.food.map((food) => (
         <div key={food._id} className='foods'>
           <div id='section'>
+          <span>{food.title}</span>
           <Popup
-              trigger={<span className='span'>{food.title}</span>}
+              trigger={<span className='span'>{food.image && <img src={food.image} alt={food.title}/>}</span>}
               modal
               nested>
               {close => (
@@ -18,6 +19,8 @@ function FoodIndex(props){
                 <div className="header">{food.title}</div>
                     <div className="content">
                       {' '}
+                      {food.image && <img src={food.image} alt={food.title}/>}
+                      <br />
                         {food.description}
                       <br />
                         <p>Distance: {food.distance} from Atlanta Center</p>
@@ -35,7 +38,6 @@ function FoodIndex(props){
                 </div>
                 )}
               </Popup>
-            {food.image && <img src={food.image} alt={food.title}/>}
           </div>
         </div>
     ));
