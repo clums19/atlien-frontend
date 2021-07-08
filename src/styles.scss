@@ -17,14 +17,21 @@ body {
     text-align: center;
     height: 100vh;
 }
-nav {
+.mainNav {
     display: flex;
     flex-direction: row;
     padding: 10px;
+    border-bottom: 1px solid $grey;
+    border-top: 1px solid $grey;
     justify-content: space-around;
+    flex-wrap: wrap;
     a {
         text-decoration: none;
         color: $grey;
+    }
+    a:hover {
+      background-color: $accentcolor;
+      color: $white;
     }
 }
 div {
@@ -36,7 +43,6 @@ div {
 }
 span {
     font-weight: bold;
-    cursor: pointer;
 }
 .bigNav {
     display: flex;
@@ -45,16 +51,20 @@ span {
     a {
         color: $grey;
         padding-top: 40px;
-        padding-left: 250px;
+        padding-left: 100px;
         text-decoration: none;
+        border-top: 5px solid $grey;
         font-size: 3em;
         flex-grow: 1;
         text-align: left;
+        
+    }
+    a:hover {
+      background-color: $accentcolor;
+      color: $white;
     }
 }
-// .bigNav>a {
 
-// }
 .section {
     position: relative;
     flex-wrap: wrap;
@@ -84,11 +94,14 @@ img {
     object-fit: cover;
     text-align: center;
 }
+img:hover {
+  border: 2px solid $accentcolor;
+}
 .modal {
     font-size: 20px;
     background-color: $black;
     color: $accentcolor;
-    width: 50%;
+    width: 100%;
   }
   .modal > .header {
     width: 45%;
@@ -120,6 +133,12 @@ img {
     background: #ffffff;
     border-radius: 18px;
     border: 1px solid #cfcece;
+  }
+  @media only screen and (max-width: 375px) {
+    .root {
+      width: 100%;
+    }
+    
   }
   .popup-overlay {
     background: rgba(0, 0, 0, 0.7);
