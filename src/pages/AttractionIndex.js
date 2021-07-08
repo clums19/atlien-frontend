@@ -1,6 +1,4 @@
 import Popup from "reactjs-popup";
-import {Link} from 'react-router-dom';
-
 
 function AttractionIndex(props){
 
