@@ -23,7 +23,7 @@ function AttractionIndex(props){
               <br />
                 <p>Distance: {attraction.distance} from Atlanta Center</p>
               <br />
-                <a href={attraction.web} target='_blank'>
+                <a href={attraction.web} target='_blank' rel='noreferrer'>
                   Click to go to Website
                 </a> 
             </div>
