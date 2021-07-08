@@ -1,3 +1,4 @@
+import Popup from "reactjs-popup";
 
 function ParkIndex(props){
 
@@ -5,7 +6,35 @@ function ParkIndex(props){
     return props.park.map((park) => (
         <div key={park._id} className='foods'>
           <div id='section'>
-            <span>{park.title}</span>
+          <Popup
+              trigger={<span className='span'>{park.title}</span>}
+              modal
+              nested>
+              {close => (
+                <div className="modal">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                <div className="header">{park.title}</div>
+                    <div className="content">
+                      {' '}
+                        {park.description}
+                      <br />
+                        <p>Distance: {park.distance} from Atlanta Center</p>
+                      <br />
+                        <a href={park.web} target='_blank' rel='noreferrer'>
+                          Click to go to Website
+                        </a> 
+                    </div>
+                <button
+                  className="button"
+                  onClick={() => {
+                    close();
+                  }}> Close
+                </button>
+                </div>
+                )}
+              </Popup>
             {park.image && <img src={park.image} alt={park.title}/>}
           </div>
         </div>
