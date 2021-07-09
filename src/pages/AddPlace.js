@@ -28,7 +28,8 @@ function AddPlace(props) {
     };
     return(
         <section>
-            <form onSubmit={handleSubmit}>
+            <Main/>
+            <form className='newPlace' onSubmit={handleSubmit}>
                 <input 
                 type="text"
                 name='title'
@@ -68,7 +69,6 @@ function AddPlace(props) {
                 </select>
                 <input type='submit' value='Add Place'/>
             </form>
-            <Main/>
         </section>
     )
 }

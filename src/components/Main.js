@@ -18,7 +18,7 @@ function Main(props){
             <Link to='/attractions'>
                 <h2>Attractions</h2>
             </Link>
-            <Link to='/form'>
+            <Link to='/form' style={{backgroundColor: '#F7934C'}}>
                 <h2>Add Place</h2>
             </Link>
         </nav>
