@@ -70,7 +70,7 @@ div {
 span {
     font-weight: bold;
     font-size: 18px;
-    color: $grey;
+    color: $maincolor;
     text-shadow: 1px 1px $black;
     background: rgba(255, 255, 255, 0.2);
 }
@@ -124,6 +124,7 @@ img {
     float: left;
     object-fit: cover;
     text-align: center;
+    cursor: pointer;
 }
 img:hover {
   border: 2px solid $maincolor;
@@ -167,11 +168,19 @@ img:hover {
   }
   .newPlace {
     text-align: center;
-    margin: 200px;
+    margin: 100px;
     padding: 200px;
     color: $maincolor;
     text-shadow: 1px 1px $black;
     font-size: 35px;
+    input, select {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  }
+  .formTitle {
+    position: relative;
+    text-align: center;
   }
   @media only screen and (max-width: 375px) {
     .root {
