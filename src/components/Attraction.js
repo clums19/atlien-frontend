@@ -4,6 +4,7 @@ import AttractionIndex from "../pages/AttractionIndex";
 import Main from "./Main";
 
 
+
 function Attraction(props){
     const [attraction, setAttraction] =useState(null);
 

@@ -1,7 +1,15 @@
 import Popup from "reactjs-popup";
+// import { useState, useEffect } from 'react';
 
 function AttractionIndex(props){
-
+  // const [posted, setPosted] = useState(null)
+  // useEffect(() => {
+  //   if(post) {
+  //     const id = match.params.id;
+  //     const posted = post.find(p => p._id === id);
+  //     setPosted(posted)
+  //   }
+  // }, [posted,match])
   const loaded = () => {
     
     return props.attraction.map((attraction) => (
@@ -40,13 +48,19 @@ function AttractionIndex(props){
         )}
       </Popup>
       </div>
+      {/* <button onClick={() => handleDelete(attraction._id)}>X</button> */}
     </div>
     ));
   };
-
+  
+  
   const loading = () => {
     return <h1>Loading...</h1>;
   }
+  // const handleDelete = (id) => {
+  //   deletePost(id);
+  //   history.push('/attractions');
+  // }
     return props.attraction ? loaded() : loading();
   } 
   

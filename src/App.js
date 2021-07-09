@@ -7,7 +7,8 @@ import Club from './components/Club';
 import Bar from './components/Bar';
 import Park from './components/Park';
 import Attraction from './components/Attraction';
-
+import Form from './components/Form';
+import DeleteUpdate from './components/DeleteUpdate';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
         <Route path='/attractions'>
           <Attraction />
         </Route>
+        <Route path='/form'>
+          <Form />
+        </Route>
+        <DeleteUpdate />
       </Switch>
       
     </div>

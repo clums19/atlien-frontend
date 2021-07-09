@@ -18,6 +18,9 @@ function Main(props){
             <Link to='/attractions'>
                 <h2>Attractions</h2>
             </Link>
+            <Link to='/form'>
+                <h2>Add Place</h2>
+            </Link>
         </nav>
     );
   } 
